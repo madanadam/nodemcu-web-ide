@@ -9,9 +9,11 @@ Picked up by Petr Stehlík in October 2016, updated for recent NodeMCU based on 
 
 https://github.com/joysfera/nodemcu-web-ide
 
+- Added "init.lua"
+
 ### Usage
-1. upload&compile the _ide.lua_ to your device using [nodemcu-uploader](https://github.com/kmpm/nodemcu-uploader): ```nodemcu-uploader.py -c ide.lua```
+1. upload&compile the _ide.lua_ to your device using [nodemcu-uploader](https://github.com/kmpm/nodemcu-uploader): ```nodemcu-uploader.py upload ide.lua --compile```
 2. use a terminal program (Putty, picocom) to connect to your NodeMCU device via the serial (USB) port
-3. set up WiFi connection using `wifi.sta.config({ssid='YourWiFiName',pwd='YourWiFiPassword'})`
+3. set up WiFi connection editing SSID and PASSWORD at "init.lua"
 4. run the uploaded file with the `dofile("ide.lc")` command
 5. launch your web browser and open the IP address of your device
